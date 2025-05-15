@@ -289,6 +289,103 @@ de “proporcionar un servicio de información transparente” (Wiggers, 2023)
     </div>
 
   </div><!-- /.col -->
+
+  
+                          <style>
+ 
+                                .video-wrapper iframe{
+                                    width:100%;
+                                    height:60vh;
+                                    border:0;
+                                    border-radius:12px;
+                                    box-shadow:0 6px 24px rgba(0,0,0,.25);
+                                }
+
+                                /* Galería vertical con zoom */
+                                .gallery-vertical{
+                                    display:flex;
+                                    flex-direction:column;
+                                    align-items:center;
+                                    gap:2rem;
+                                }
+                                .gallery-vertical .gallery-item{
+                                    display:flex;
+                                    flex-direction:column;
+                                    align-items:center;
+                                }
+                                .gallery-vertical img{
+                                    width:100%;
+                                    max-width:600px;
+                                    border-radius:12px;
+                                    box-shadow:0 4px 16px rgba(0,0,0,.15);
+                                    cursor:pointer;
+                                    transition:transform .3s, box-shadow .3s;
+                                }
+                                .gallery-vertical img:hover{ transform:scale(1.08); }
+                                .gallery-vertical img.zoomed{
+                                    transform:scale(1.6);
+                                    z-index:1050;
+                                    box-shadow:0 10px 32px rgba(0,0,0,.4);
+                                }
+
+                                /* ── NUEVO: estilo “bonito” para los títulos de las imágenes ── */
+                                .gallery-vertical figcaption{
+                                    margin-top:.6rem;
+                                    font-family:'Kumbh Sans', sans-serif;   /* misma fuente que el título */
+                                    font-size:1.25rem;                     /* tamaño agradable, no tan grande */
+                                    font-weight:600;                       /* grosor similar al heading */
+                                    color:#006699;                         /* mismo azul del heading Multimedia */
+                                    text-align:center;
+                                }
+                                </style>
+
+                                <section id="multimedia" class="py-5" style="background:#f9fbfd;">
+                                <div class="container d-flex flex-column align-items-center">
+
+                                    <h2 class="tm-text-primary text-center mb-5 display-5">Multimedia</h2>
+
+                                    <!-- Vídeo -->
+                                    <div class="video-wrapper w-100 mb-5">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/nPFHLq_cmPk?si=nBp1a3IthIrsGNlW"
+                                        title="Perplexity AI: explicación completa"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                    </div>
+
+                                    <!-- Galería vertical -->
+                                    <div class="gallery-vertical mb-5">
+
+                                    <figure class="gallery-item">
+                                        <img src="./img/perplexity.png" alt="Página principal de Perplexity AI">
+                                        <figcaption>Página principal</figcaption>
+                                    </figure>
+
+                                    <figure class="gallery-item">
+                                        <img src="./img/que_es_perplexity.png" alt="Búsqueda en Perplexity AI">
+                                        <figcaption>Búsqueda en&nbsp;Perplexity</figcaption>
+                                    </figure>
+
+                                    <figure class="gallery-item">
+                                        <img src="./img/imagenperplexity.png" alt="Imágenes en Perplexity AI">
+                                        <figcaption>Imágenes en&nbsp;Perplexity</figcaption>
+                                    </figure>
+
+                                    </div>
+
+                                    <a href="https://www.perplexity.ai" target="_blank"
+                                    class="btn btn-primary px-4 py-2">
+                                    <i class="fas fa-external-link-alt me-2"></i>Visitar página oficial
+                                    </a>
+                                </div>
+                                </section>
+
+                                <script>
+                                /* Alternar zoom al hacer clic */
+                                document.querySelectorAll('.gallery-vertical img')
+                                        .forEach(img=>img.addEventListener('click',()=>img.classList.toggle('zoomed')));
+                                </script>   
+
                         
                         <!-- Cómo funciona Perplexity AI -->
                         <div>
